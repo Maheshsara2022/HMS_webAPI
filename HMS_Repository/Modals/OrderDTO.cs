@@ -14,6 +14,8 @@ namespace HMS_Repository.Modals
         public int? OrderitemID  { get; set; }
         public string ItemName { get; set; }
         public string ItemStatus { get; set; }
+        public int? Price { get; set; }
+        public string empName { get; set; }
     }
     public class dashboardCards
     {
@@ -44,6 +46,47 @@ namespace HMS_Repository.Modals
         public string Name { get; set; }
         public string Tablestatus { get; set; }
 
+        public IList<OrderDTO> orderDetails { get; set; }
+
+    }
+
+    public class FoodItemList
+    {
+        public int itemId { get; set; }
+        public string itemName { get; set; }
+        public string itemType { get; set; }
+        public int? price { get; set; }
+        public string itemDec { get; set; }
+        public int? categoryId { get; set; }
+        public string categoryName { get; set; }
+        public int counter { get; set; }
+
+    }
+
+    public class placeOrderDTO
+    {
+        public int orderId { get; set; }
+
+        public int itemID { get; set; }
+        public string orderstatus { get; set; }
+        public int tableID { get; set; }
+        public string itemName { get; set; }
+        public int? itemprice { get; set; }
+        public int counter { get; set; }
+        public int? employeID { get; set; }
+        public string itemstatus { get; set; }
+
+    }
+
+    public class cheafupdateitemStatus
+    {
+        public int itemID { get; set; }
+        public string itemName { get; set; }
+        public int? orderId { get; set; }
+        public int? tableID { get; set; }
+        public string tablename { get; set; }
+        public int? employeID { get; set; }
+        public string itemstatus { get; set; }
 
     }
 }

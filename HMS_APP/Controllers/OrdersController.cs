@@ -43,6 +43,46 @@ namespace HMS_APP.Controllers
         {
             return await _orderRepository.getBookingTableorderDetails();
         }
+
+        [HttpGet]
+        [Route("getfoodItemsList")]
+        public async Task<IList<FoodItemList>> getfoodItemsList()
+        {
+            return await _orderRepository.getfooditemsList();
+        }
+
+        [HttpPost]
+        [Route("placeOrderforTable")]
+        public async Task<bool> placeOrderforTable(List<placeOrderDTO> placobj)
+        {
+            return await _orderRepository.placeOrderforTable(placobj);
+        }
+
+        [HttpPost]
+        [Route("getallOrdersList")]
+        public async Task<IList<OrderDTO>> getallOrdersList()
+        {
+            return await _orderRepository.getallOrdersList();
+        }
+
+        [HttpPost]
+        [Route("fishorder")]
+        public async Task<bool> fishorder(placeOrderDTO orderId)
+        {
+            return await _orderRepository.fishorder(orderId);
+        }
+        [HttpPost]
+        [Route("Reservetable")]
+        public async Task<bool> Reservetable(placeOrderDTO orderId)
+        {
+            return await _orderRepository.Reservetable(orderId);
+        }
+        [HttpPost]
+        [Route("GetpendingOrdersByID")]
+        public async Task<IList<OrderDTO>> GetpendingOrdersByID(placeOrderDTO orderId)
+        {
+            return await _orderRepository.GetpendingOrdersByID(orderId.orderId);
+        }
         
     }
 }

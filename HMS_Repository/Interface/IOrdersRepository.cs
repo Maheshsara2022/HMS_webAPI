@@ -12,5 +12,14 @@ namespace HMS_Repository.Interface
         Task<dashboardCards> getorderscount();
         Task<List<tabledata>> getTableData();
         Task<List<bookingorderDeatils>> getBookingTableorderDetails();
+        Task<IList<FoodItemList>> getfooditemsList();
+        Task<bool> placeOrderforTable(List<placeOrderDTO> placobj);
+        Task<bool> fishorder(placeOrderDTO orderId);
+        Task<bool> Reservetable(placeOrderDTO orderId);
+        Task<IList<OrderDTO>> GetpendingOrdersByID(int orderID);
+        Task<IList<OrderDTO>> getallOrdersList();
+       
+
+
     }
 }
